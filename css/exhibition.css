@@ -1,0 +1,194 @@
+/* ===== FONT ===== */
+@font-face {
+    font-family: 'InriaSerif';
+    src: url('../fonts/InriaSerif-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InriaSerif';
+    src: url('../fonts/InriaSerif-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'InriaSerif', 'Times New Roman', serif;
+    background-color: #bcc7e5;
+    color: #333;
+}
+
+/* ===== PAGE ===== */
+.page {
+    width: 100%;
+    padding: 60px 80px;
+}
+
+/* ===== HEADER ===== */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+/* logo */
+.logo {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    color: #333;
+}
+
+/* ✔ FIX: nav 右移关键 */
+.nav {
+    display: flex;
+    gap: 24px;
+    margin-left: auto;
+}
+
+.nav a {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: #333;
+}
+
+/* ===== divider ===== */
+.divider {
+    border: none;
+    border-top: 1px solid #000;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* ===== year ===== */
+.year {
+    display: flex;
+    gap: 15px;
+    margin: 24px 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.year span.active {
+    font-size: 18px;
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* ===== work ===== */
+.work {
+    margin-bottom: 26px;
+}
+
+.work-trigger {
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    padding: 0;
+}
+
+.title-line {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 14px;
+}
+
+/* ===== expand ===== */
+.work-details {
+    display: none;
+    grid-template-columns: 170px 1fr;
+    gap: 24px;
+}
+
+.work.open .work-details {
+    display: grid;
+}
+
+/* background on open */
+.work.open {
+    background-color: rgba(0,0,0,0.06);
+    padding: 10px 0;
+}
+
+/* poster */
+.poster {
+    width: 170px;
+    border-radius: 10px;
+    display: block;
+}
+
+/* meta */
+.meta h3 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.meta p {
+    font-size: 11px;
+    color: #333;
+    line-height: 1.5;
+    max-width: 420px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 760px) {
+
+    .page {
+        width: 100%;
+        padding: 40px 24px;
+    }
+
+    .top {
+        margin-bottom: 40px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .nav {
+        gap: 10px;
+        font-size: 9px;
+    }
+
+    .work-details {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .poster {
+        width: 60vw;
+    }
+
+    .meta h3 {
+        font-size: 24px;
+    }
+}

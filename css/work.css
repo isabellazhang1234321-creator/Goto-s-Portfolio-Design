@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'InriaSerif';
+    src: url('../fonts/InriaSerif-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InriaSerif';
+    src: url('../fonts/InriaSerif-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'InriaSerif', 'Times New Roman', serif;
+    background-color: #bcc7e5;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 80px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    color: #333;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+.nav a {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: #333;
+}
+
+.main {
+    flex: 1;
+}
+
+.painting-section{
+    padding-top: 90px;
+}
+
+.painting-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 60px;
+  row-gap: 60px;
+}
+
+.painting-item img {
+  width: 100%;
+  height: 300px;     
+  object-fit: cover;  
+  display: block;
+}
+
+.bottom-icon {
+    text-align: right;
+    margin-top: 180px;
+}
+
+.bottom-icon img {
+    width: 200px;
+    height: auto;
+}
+
+.year {
+  display: flex;      
+  gap: 10px;         
+  top: 20px;
+  left: 20px;
+}
+
+.year span.active{
+    font: size 20px;
+    color: #000;
+    font-weight: 400;
+
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* 基础结构 */
+.painting-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.painting-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+
+.painting-item .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 50%;
+
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.painting-item.special:hover .overlay {
+  opacity: 1;
+}
+
+.overlay .title {
+  font-weight: 300;   /* light */
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.overlay .desc {
+  font-weight: 300;   /* light */
+  font-size: 12px;
+  line-height: 1.5;
+}
+.text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+a[href="The.html"] .text-wrap {
+  padding-left: 35px;
+}
+
+.year-link{
+  font-size: 16px;
+  color: #333;
+  margin-right: px;
+  text-decoration: none;
+}
+
+

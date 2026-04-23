@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'InriaSerif';
+    src: url('../fonts/InriaSerif-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InriaSerif';
+    src: url('../fonts/InriaSerif-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'InriaSerif', 'Times New Roman', serif;
+    background-color: #bcc7e5;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 80px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    color: #333;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+.nav a {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: #333;
+}
+
+.main {
+    flex: 1;
+}
+
+.contact-section {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 40px 0;
+}
+
+.contact-info {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #555;
+}
+
+.bottom-icon {
+    position: absolute;
+    bottom: 60px;
+    right: 80px;
+}
+
+.bottom-icon img {
+    width: 120px;
+    height: auto;
+}
+
+.biography-page {
+    height: auto;
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+.biography-page::-webkit-scrollbar {
+    width: 8px;
+}
+
+.biography-page::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.biography-page::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.biography-page::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.biography-main {
+    padding-right: 0;
+}
+
+.biography-section {
+    margin-bottom: 120px;
+}
+
+.bio-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    margin-bottom: 80px;
+}
+
+.bio-text {
+    line-height: 2;
+    font-size: 18px;
+    color: #555;
+
+}
+
+ 
+.artist-statement .label {
+    color: #444;
+}
+
+ 
+
+.gallery-section {
+    margin-bottom: 80px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:50px;
+}
+
+.gallery-item {
+    aspect-ratio: 1;
+    overflow: hidden;
+    background-color: #a8b5d1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.bottom-icon-bio {
+    text-align: right;
+    margin-top: 180px;
+}
+
+.bottom-icon-bio img {
+    width: 120px;
+    height: auto;
+}
